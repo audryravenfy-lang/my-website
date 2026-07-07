@@ -96,6 +96,7 @@ input:focus{border-color:var(--brown)}
       <button type="button" class="staff-btn" data-staff="11">董雪瑞</button>
       <button type="button" class="staff-btn" data-staff="12">朱卓</button>
       <button type="button" class="staff-btn" data-staff="13">陈哲男</button>
+      <button type="button" class="staff-btn" data-staff="14">李少飞</button>
     </div>
   </div>
 
@@ -207,7 +208,8 @@ var STAFF=[
   {name:"李敏",plate:"粤REL127",from:"西谷检测检验产业园"},
   {name:"董雪瑞",plate:"陕ABD9132",from:"西谷检测检验产业园"},
   {name:"朱卓",plate:"陕AD1S55",from:"西谷检测检验产业园"},
-  {name:"陈哲男",plate:"陕AV5A57",from:"西谷检测检验产业园"}
+  {name:"陈哲男",plate:"陕AV5A57",from:"西谷检测检验产业园"},
+  {name:"李少飞",plate:"陕A18E0L",from:"西谷检测检验产业园"}
 ];
 var records=[];
 try{records=JSON.parse(localStorage.getItem("trip_records")||"[]");}catch(e){}
@@ -376,7 +378,6 @@ function renderList(){
     html+='</div>';
   });
   el.innerHTML=html;
-  // rebind photo click with full data
   var imgs=el.querySelectorAll(".card-photos img");
   imgs.forEach(function(img){
     img.onclick=function(){
